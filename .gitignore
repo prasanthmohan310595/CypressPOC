@@ -1,0 +1,10 @@
+# IntelliJ files #
+# -------------- #
+*.iml
+/.idea
+npm-debug.log
+node_modules
+cypress/videos
+cypress/screenshots
+cypress/reporters
+results
