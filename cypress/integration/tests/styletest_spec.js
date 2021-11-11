@@ -15,10 +15,10 @@ beforeEach(() => {
 })
 
 it('Validates Add Account Styles', () => {
-    css_styles.getAddAccountStyle()
+    css_styles.getAddAccount().should('have.css', 'background-color', 'rgb(4, 123, 248)')
 })
 
 
 it('Validates Make Payment Styles', () => {
-  css_styles.getMakePayment()
+  css_styles.getMakePayment().should('have.css', 'border-color', 'rgb(36, 179, 20)')
 })
