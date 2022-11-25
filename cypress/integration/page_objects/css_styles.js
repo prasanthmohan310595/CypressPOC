@@ -1,15 +1,22 @@
 import 'cypress-xpath'
 
-export default class CSSStyles{
+export default class CSSStyles {
 
 
-    getAddAccount(){
+    getAddAccount() {
         return cy.xpath('//a[@class="btn btn-primary btn-sm"]')
     }
 
-    getMakePayment(){
+    getMakePayment() {
         return cy.xpath('//a[@class="btn btn-success btn-sm"]')
     }
 
+    getMakePayment() {
+        return cy.xpath('//a[@class="btn btn-success btn-sm"]')
+    }
+
+    getTableValues() {
+        return cy.xpath('//table[@class="table table-padded"]//tr/td[4]/a')
+    }
 
 }
