@@ -6,12 +6,9 @@ const login_page = new LoginPage();
 const css_styles = new CSSStyles();
 
 
-before(function () {
-  login_page.performUserLogin()
-})
-
-beforeEach(() => {
-    Cypress.Cookies.preserveOnce('JSESSIONID', 'remember_token')
+beforeEach(function () {
+    // login_page.performUserLogin()
+    cy.envLogin()
 })
 
 it('Validates Add Account Styles', () => {

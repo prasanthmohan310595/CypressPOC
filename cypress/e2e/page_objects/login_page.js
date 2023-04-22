@@ -6,13 +6,6 @@ export default class LoginPage {
     //link - link
     //radio button - rb
 
-    isOktaLogin = false;
-
-    getIsOktaLogin() {
-        return this.isOktaLogin;
-    }
-
-
     getUsername(){
         return cy.xpath('//input[@id="username"]')
     }
