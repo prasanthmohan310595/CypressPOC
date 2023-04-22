@@ -4,12 +4,13 @@ import MakeMyTripPage from '../page_objects/mmt';
 const mmt_page = new MakeMyTripPage();
 
 
-before(function () {
-  cy.visit('https://www.makemytrip.com/hotels/')
+beforeEach(function () {
+  cy.visit('https://www.makemytrip.com/')
 })
 
 it('Display the second least price hotel', () => {
   
+  mmt_page.getBtnHotels().click()
   mmt_page.getBtnCitySelection().click()
   mmt_page.getIptCitySelection().type('Bangalore')
   mmt_page.getLstCityItem('Bangalore').click()

@@ -6,6 +6,10 @@ export default class MakeMyTripPage {
     //link - link
     //radio button - rb
 
+    getBtnHotels(){
+        return cy.get('.chNavIcon.appendBottom2.chSprite.chHotels')
+    }
+
     getBtnCitySelection(){
         return cy.get('#city')
     }
