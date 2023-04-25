@@ -17,21 +17,21 @@ export default class MakeMyTripPage {
         return cy.xpath('//input[@placeholder="Enter city/ Hotel/ Area/ Building"]')
     }
     getLstCityItem(city){
-        return cy.xpath(`//ul//p[contains(text(),'${city}')]`)
+        return cy.xpath(`(//ul//p[contains(text(),'${city}')])[1]`)
     }
 
     getDate(date){
-        return cy.xpath(`//div[@aria-label='${date}']`)
+        return cy.xpath(`(//div[@aria-label='${date}'])[1]`)
     }
     
     selectRoomsAndGuests(rooms,adults,children){
-        cy.xpath('//p[text()="Rooms"]/parent::div/following-sibling::div').click()
-        cy.xpath(`//ul[@class="gstSlct__list"]/li[${rooms}]`).click()
-        cy.xpath('//p[text()="Adults"]/parent::div/following-sibling::div').click()
-        cy.xpath(`//ul[@class="gstSlct__list"]/li[${adults}]`).click()
-        cy.xpath('//p[text()="Children"]/parent::div/following-sibling::div').click()
-        cy.xpath(`//ul[@class="gstSlct__list"]/li[${children}]`).click()
-        cy.get('.primaryBtn.btnApplyNew.pushRight.capText').click()
+        cy.xpath('//p[text()="Rooms"]/parent::div/following-sibling::div//span').click({force:true})
+        cy.xpath(`//ul[@class="gstSlct__list"]/li[${rooms}]`).click({force:true})
+        cy.xpath('//p[text()="Adults"]/parent::div/following-sibling::div//span').click({force:true})
+        cy.xpath(`//ul[@class="gstSlct__list"]/li[${adults}]`).click({force:true})
+        cy.xpath('//p[text()="Children"]/parent::div/following-sibling::div//span').click({force:true})
+        cy.xpath(`//ul[@class="gstSlct__list"]/li[${children}]`).click({force:true})
+        cy.get('.primaryBtn.btnApplyNew.pushRight.capText').click({force:true})
     }
 
     getSearchBtn(){
